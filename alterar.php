@@ -106,7 +106,7 @@
             session_start();
             $_SESSION ['idCliente'] = $_GET['a'];
 
-            $base = mysqli_connect('localhost', 'root', 'usbw', 'tryelions') or die("Erro de conexão");
+            $base = mysqli_connect('localhost', 'root', '', 'tryelions') or die("Erro de conexão");
             $regra = "SELECT * FROM cliente WHERE idCliente = '". $_SESSION ["idCliente"] ."'";
 
             $res = mysqli_query ($base, $regra);

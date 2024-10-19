@@ -33,7 +33,7 @@
             session_start();
             $_SESSION ["idCliente"] = $_GET['a'];
 
-            $base = mysqli_connect('localhost', 'root', 'usbw', 'tryelions');
+            $base = mysqli_connect('localhost', 'root', '', 'tryelions');
             $apagar = "DELETE FROM cliente WHERE idCliente ='" . $_SESSION ["idCliente"] . "'";
             mysqli_query($base, $apagar);
 

@@ -92,7 +92,7 @@
     </head>
     <body>
         <?php
-        $base = mysqli_connect('localhost', 'root', 'usbw', 'tryelions') or die("erro de conexão");
+        $base = mysqli_connect('localhost', 'root', '', 'tryelions') or die("erro de conexão");
         $regra1 = "SELECT * FROM cliente order by idCliente";
 
         $res = mysqli_query($base, $regra1);

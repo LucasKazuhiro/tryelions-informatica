@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `nome` varchar(35) NOT NULL,
   `endereco` varchar(35) NOT NULL,
   `pagamento` varchar(30) NOT NULL,
-  `avalicao` int(2) NOT NULL,
+  `avaliacao` int(2) NOT NULL,
   `reclamacao` varchar(1000) NOT NULL,
   PRIMARY KEY (`idCliente`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;

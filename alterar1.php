@@ -43,7 +43,7 @@
             $reclamacao = $_POST["reclamacao"];
 
 
-            $base = mysqli_connect('localhost', 'root', 'usbw', 'tryelions') or die("Erro de conexão");
+            $base = mysqli_connect('localhost', 'root', '', 'tryelions') or die("Erro de conexão");
             $regra = "UPDATE cliente SET nome='$nome', endereco='$endereco', pagamento='$pagamento', avaliacao='$avaliacao', reclamacao='$reclamacao' WHERE idCliente='". $_SESSION ["idCliente"] ."'";
             $res = mysqli_query($base, $regra) or die ("A alteração de dados falhou!!");
 
