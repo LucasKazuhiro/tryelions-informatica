@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+    <html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Tryelions </title>
+
+        <style>
+            /* -- -- -- -- Fontes -- -- -- -- */
+            /* -- Nexa-Bold -- */
+            @font-face{
+                font-family: 'Nexa';
+                src: url(../Fontes/Nexa-Bold.otf) format(truetype);
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- Roboto Condensed -- */
+            @font-face {
+                font-family: 'Roboto Condensed';
+                src: url('../Fontes/RobotoCondensed-Bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }  
+
+            /* -- Open Sans -- */
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('../Fontes/OpenSans-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('../Fontes/OpenSans-Bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- Montserrat -- */
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('../Fontes/Montserrat-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+
+            /* -- -- -- -- Body -- -- -- -- */
+            body{
+                margin: 0;
+                padding: 0;
+                background-color:white;
+                height: 1000px;
+            }
+
+            ::selection {
+                background: #ffca47;
+            }
+
+            .space{
+                margin: 0;
+            }
+
+
+            /* -- -- Menu -- -- */
+            #box-menu{
+                width: 100%;
+                background: linear-gradient(black 50%, #232323 50%);
+                display : flex;
+                flex-direction : row;
+            }
+
+            #box-logo{
+                width: 19.3%;
+                padding: 8px 0px 3px 0px;
+                background-color: black;
+                height: 58px;
+            }
+
+            #marca{
+                font-size: 26px;
+                height: 58px;
+                color: #ffe800;
+                font-family: 'Nexa';
+                font-weight: bold;
+                letter-spacing: 1px;
+                float: left;
+                margin-top: 10px;
+            }
+
+            #bar{
+                height: 58px;
+                width: 0.8%;
+                padding: 8px 0px 3px 0px;
+                background-color: #db9926;
+                transform: skew(-18deg);
+            }
+
+            #box-paginas{
+                width: 79.9%;
+                background-color: #232323;
+                height: 58px;
+                padding: 8px 0px 3px 0px;
+                
+            }
+
+            #menu li{
+                list-style: none;
+                display: inline-block;	
+                margin-right: 25px;
+                font-family: 'Montserrat';
+                letter-spacing: 0.5px;
+	            font-size: 15px;
+            }
+
+            #menu li a{
+                text-decoration: none;
+                color: white;
+            }
+
+            #menu li a:hover{
+	            color: #FFA500;
+	            transition: 0.4s;
+            }
+
+            /* -- -- Título -- -- */
+            #title-home{
+                font-family: 'Roboto Condensed',sans-serif;
+                font-size: 40px;
+                margin-bottom:35px;
+                margin-top: 50px;
+            }
+
+            #title-computador{
+                font-family: 'Roboto Condensed',sans-serif;
+                font-size: 28px;
+                margin-bottom: -10px;
+            }
+
+            #title-mobile{
+                font-family: 'Roboto Condensed',sans-serif;
+                font-size: 28px;
+                margin-top: 50px;
+                margin-bottom: 20px;
+            }
+
+            /* -- -- Box Imagens Computador -- -- */
+            #box-produtos-comp{
+                margin-left: 116px;
+                padding: 15px 0px 0px 0px;
+            }
+
+            .img-hover-zoom-comp {
+                width: 270px; 
+                height: 235px;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            .img-hover-zoom-comp img {
+                transition: .6s ease;
+            }       
+
+            .img-hover-zoom-comp:hover img {
+                transform: scale(1.25);
+                opacity: 0.8;
+            }
+
+            #img-hover-zoom-teclado {
+                width: 390px; 
+                height: 235px;
+                overflow: hidden;
+                display: inline-block;
+            }
+
+            #img-hover-zoom-teclado img {
+                transition: .6s ease;
+            }       
+
+            #img-hover-zoom-teclado:hover img {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+
+
+            /* -- -- Box Imagens Mobile -- -- */
+            #box-produtos-moba{
+                margin-left: 12px;
+            }
+
+            .img-hover-zoom-moba{
+                width: 230px; 
+                height: 255px;
+                overflow: hidden;
+                display: inline-block;
+                
+            }
+
+            .img-hover-zoom-moba img {
+                transition: .6s ease;
+            }       
+
+            .img-hover-zoom-moba:hover img {
+                transform: scale(1.25);
+                opacity: 0.8;
+            }
+
+            /* -- -- Botão Reclamação -- --*/
+            #btn-reclamacao{
+                margin-top: 80px;
+                width: 180px;
+                padding: 8px 7px 8px 7px; 
+                background-color: #DE7900;
+                font-size: 15px;
+                font-family: 'Montserrat';
+                text-decoration: none;
+                color: white;
+                border: none;
+                letter-spacing: 0.5px;
+                border-radius: 6px;
+                user-select: none;
+                margin-right: 20px;
+            }
+
+            #btn-reclamacao:active{
+                background-color: #CD5400;
+            }
+
+            /* -- -- Botão de Listagem -- -- */
+            #btnlist{
+                font-family: 'Montserrat';
+                border: none;
+                padding: 10px 10px 10px 10px;
+                background-color: #59A95D;
+                font-size: 15px;
+                border-radius: 4px;
+                color: white;
+                margin-top: 20px;
+                margin-left: -18px;
+                user-select: none;
+            }
+
+            #btnlist:active{
+                background-color: #509C54;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box-menu">
+            <div id="box-logo">
+                <a href="Home.html">
+                    <div style=" width: 200px; height: 60px; position: absolute; margin-left: 28px; margin-top: -3.5px;"> </div>
+                </a>
+
+                <img src="logo.PNG" alt="" width=48px style="margin-left: 40px; margin-right: 14px; float: left;">
+                <p id="marca"> Tryelions </p>
+            </div>
+
+            <div id="bar">
+
+            </div>
+
+            <div id="box-paginas">
+                <ul id="menu">
+                    <li style="margin-left: -5px;"><a href="Home.html"> HOME </a></li>
+                    <li><a href="../Produtos/gabinete/gabinete.html"> GABINETE </a></li>
+                    <li><a href="../Produtos/monitor/monitor.html"> MONITOR </a></li>
+                    <li><a href="../Produtos/teclado/teclado.html"> TECLADO </a></li>
+                    <li><a href="../Produtos/capa/capa.html"> CAPINHA </a></li>
+                    <li><a href="../Produtos/pelicula/pelicula.html"> PELÍCULA </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <h1 id="title-home"> Tryelions </h1>
+
+            <h2 id="title-computador"> Computador </h2>
+
+
+            <div id="box-produtos-comp" style="user-select: none;"> 
+                <div class="img-hover-zoom-comp">
+                    <a href="../Produtos/gabinete/gabinete.html">
+                        <img src="gabinete.png" alt="Redragon Wheel Jack" title="Redragon Wheel Jack" style="width: 270px; height: 235px; user-select: none;">
+                    </a>
+                </div>
+
+                <div class="img-hover-zoom-comp">
+                    <a href="../Produtos/monitor/monitor.html">
+                        <img src="monitor.jpg" alt="Warrior 24 Pol. Gamer Curvo 144HZ" title="Warrior 24 Pol. Gamer Curvo 144HZ" style="width: 270px; height: 235px; user-select: none;">
+                    </a>
+                </div>
+
+                <div id="img-hover-zoom-teclado">
+                    <a href="../Produtos/teclado/teclado.html">
+                        <img src="teclado.png" alt="Cougar Gamer Vantar" title="Cougar Gamer Vantar" style="width: 400px; height: 235px; margin-left: -10px; user-select: none;">
+                    </a>
+                </div>
+            </div>
+
+
+            <h2 id="title-mobile"> Mobile </h2>
+
+            <div id="box-produtos-moba" style="user-select: none;">
+                <div class="img-hover-zoom-moba">
+                    <a href="../Produtos/capa/capa.html">
+                        <img src="capacel.png" alt="Japanese Gold Dragon" title="Capinha Japanese Gold Dragon" style="width: 230px; height: 255px; user-select: none;">
+                    </a>
+                </div>
+
+                <div class="img-hover-zoom-moba">
+                    <a href="../Produtos/pelicula/pelicula.html">
+                        <img src="pelicula.jpg" alt="Pelicula de Vidro Temperado" title="Pelicula de Vidro Temperado" style="width: 230px; height: 255px; margin-left: -20px; user-select: none;">
+                    </a>    
+                </div>
+            </div>
+
+            
+            <a href="../avaliacao/avaliacao.html"> <button id="btn-reclamacao"> Enviar Reclamação </button> </a>
+            <p class="space"></p>
+            <a href="../listar.inc.php"> <button id="btnlist"> Listagem de Avaliação </button> </a>
+            <p class="space"></p>
+            <a href="../consultar/consultar.html"> <button id="btnlist"> Consultar </button> </a>
+        </div>
+    </body>
+</html>

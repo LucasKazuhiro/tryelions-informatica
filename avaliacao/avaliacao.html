@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Faça a sua avaliação </title>
+        <style>
+            /* -- -- -- -- Fontes -- -- -- -- */
+            /* -- Montserrat -- */
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('../Fontes/Montserrat-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- -- -- -- Body -- -- -- -- */
+            body{
+                margin: 0;
+                padding: 0;
+                height: 1000px;
+                background-color:white;
+            }
+
+            ::selection {
+                background: #ffca47;
+            }
+
+            .space{
+                margin: 0;
+            }
+
+            input:-webkit-autofill {
+                box-shadow: 0 0 0 30px white inset;
+            }
+
+
+            /* -- -- -- -- Box -- -- -- -- */
+            #box{
+                margin-left: 35%;
+                margin-top: 5.5%;
+                background-color: #FFC377;
+                width: 460px;
+                text-align: right;
+                user-select: none;
+                padding: 12px 22px 24px 0px;
+                border-radius: 7px;
+            }
+
+            /* -- -- Label -- -- */
+            .lblInfo{
+                font-family: 'Montserrat';
+                display: inline-block;
+                font-size: 15px;
+            }
+
+            /* -- -- Campos de Texto p/ escrever -- -- */
+            .txtcampo{
+                padding: 6px 12px 6px 9px;
+                outline: none;
+                width: 300px;
+                margin-left: 10px;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                border: 1px solid #B0B0B0;
+            }
+
+            /* -- -- Reclamação -- -- */
+            #reclamacao{
+                outline: none;
+                padding: 12px 7px 17px 16px;
+                font-family: 'Montserrat';
+                margin-left: 25px;
+                width: 410px;
+                border: 1px solid #B0B0B0;
+                resize: none;
+            }
+
+
+
+            /* -- -- Botão Reclamação -- --*/
+            #btn-reclamacao{
+                margin-top: 36px;
+                margin-left: 18px;
+                width: 180px;
+                padding: 8px 7px 8px 7px; 
+                background-color: #DE7900;
+                font-size: 15px;
+                font-family: 'Montserrat';
+                text-decoration: none;
+                color: white;
+                border: none;
+                letter-spacing: 0.5px;
+                border-radius: 6px;
+                user-select: none;
+            }
+
+            #btn-reclamacao:active{
+                background-color: #CD5400;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <form action="verifica.php" method="post">
+
+            <div id="box">
+                <div style="text-align: left;">
+                    <h1 style="font-family: 'Montserrat'; font-size: 22px; margin-left: 26%; margin-bottom: 24px;"> Faça a sua reclamação </h1>
+                </div>
+
+                <p class='lblInfo'> Nome: </p>
+                <input class="txtcampo" type="text" maxlength="35" name="nome">
+
+                <p class="space"></p>
+
+                <p class='lblInfo'> Endereço: </p>
+                <input class="txtcampo" type="text" maxlength="35" name="endereco">
+
+                <p class="space"></p>
+
+                <p class='lblInfo'> Pagamento: </p>
+                <select name="pagamento" class="txtcampo" style="width: 323px; padding: 6px 0px 6px 7px;">
+                    <option value="Cartão de Débito"> Cartão de Débito </option>
+                    <option value="Cartão de Crédito"> Cartão de Crédito </option>
+                    <option value="Cartão de Crédito Parcelado"> Cartão de Crédito Parcelado </option>
+                </select>
+
+                <p class="space"></p>
+
+                <div style="text-align: left;"> 
+                    <p class='lblInfo' style="margin-left: 47px"> Avaliação: </p>
+                    <select name="avaliacao" class="txtcampo" style="width: 50px; padding: 4px 0px 4px 7px;">
+                        <option value="1"> 1 </option>
+                        <option value="2"> 2 </option>
+                        <option value="3"> 3 </option>
+                        <option value="4"> 4 </option>
+                        <option value="5"> 5 </option>
+                        <option value="6"> 6 </option>
+                        <option value="7"> 7 </option>
+                        <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                        <option value="10"> 10 </option>
+                    </select>
+                </div>   
+
+                <p class="space" style="height: 10px"></p>
+
+                <div style="text-align: left;">
+                    <p class='lblInfo' style="margin-left: 25px"> Reclamação: </p>
+                    <textarea name="reclamacao" rows="8" maxlength="1000" placeholder="Faça uma reclamação..." id="reclamacao"></textarea>
+                </div>
+
+                <div style="text-align: center;">
+                    <button id="btn-reclamacao" type="submit"> Enviar Reclamação </button>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>

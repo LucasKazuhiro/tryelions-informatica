@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Consultar Dados </title>
+
+        <style>
+            /* -- -- -- -- Fontes -- -- -- -- */
+            /* -- Montserrat -- */
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('../Fontes/Montserrat-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+
+            /* -- -- -- -- Body -- -- -- -- */
+            body{
+                margin: 0;
+                padding: 0;
+                background-color:white;
+                text-align: center;
+            }
+
+            .space{
+                margin: 0px 0px -55px 0px;
+            }
+
+            #bloco{
+                margin-top: 16%;
+                margin-left: 38%;
+                width: 400px;
+            }
+
+            /* -- -- Botão Reclamação -- --*/
+            .btn-consultar{
+                margin-top: 20px;
+                width: 200px;
+                padding: 10px 9px 10px 9px; 
+                background-color: #DE7900;
+                font-size: 15px;
+                font-family: 'Montserrat';
+                text-decoration: none;
+                color: white;
+                border: none;
+                letter-spacing: 0.5px;
+                border-radius: 6px;
+                user-select: none;
+            }
+
+            .btn-consultar:active{
+                background-color: #CD5400;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="bloco">
+            <a href="consultar-cliente.php"> <button class="btn-consultar"> Consultar Cliente </button> </a>
+            <a href="consultar-avaliacao.php"> <button class="btn-consultar"> Consultar Avaliação </button> </a>
+            <a href="consultar-reclamacao.php"> <button class="btn-consultar"> Consultar Reclamação </button> </a>
+        </div>
+    </body>
+</html>

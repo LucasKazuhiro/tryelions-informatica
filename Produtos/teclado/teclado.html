@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Redragon Wheel Jack </title>
+
+        <style>
+            /* -- -- -- -- Fontes -- -- -- -- */
+            /* -- Nexa-Bold -- */
+            @font-face{
+                font-family: 'Nexa';
+                src: url(../../Fontes/Nexa-Bold.otf) format(truetype);
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+            
+            /* -- Roboto Condensed -- */
+            @font-face {
+                font-family: 'Roboto Condensed';
+                src: url('../../Fontes/RobotoCondensed-Bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }  
+
+            @font-face {
+                font-family: 'Roboto Condensed';
+                src: url('../../Fontes/RobotoCondensed-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- Open Sans -- */
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('../../Fontes/OpenSans-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('../../Fontes/OpenSans-Light.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Open Sans';
+                src: url('../../Fontes/OpenSans-Bold.ttf') format('truetype');
+                font-weight: bold;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- Montserrat -- */
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('../../Fontes/Montserrat-Light.ttf') format('truetype');
+                font-weight: 300;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            @font-face {
+                font-family: 'Montserrat';
+                src: url('../../Fontes/Montserrat-Regular.ttf') format('truetype');
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+
+            /* -- -- -- -- Body -- -- -- -- */
+            body{
+                margin: 0;
+                padding: 0;
+                background-color:white;
+            }
+
+            ::selection {
+                background: #ffca47;
+            }
+
+
+            /* -- -- Menu -- -- */
+            #box-menu{
+                width: 100%;
+                background: linear-gradient(black 50%, #232323 50%);
+                display : flex;
+                flex-direction : row;
+            }
+
+            #box-logo{
+                width: 19.3%;
+                padding: 8px 0px 3px 0px;
+                background-color: black;
+                height: 58px;
+            }
+
+            #marca{
+                font-size: 26px;
+                height: 58px;
+                color: #ffe800;
+                font-family: 'Nexa';
+                font-weight: bold;
+                letter-spacing: 1px;
+                float: left;
+                margin-top: 10px;
+            }
+
+            #bar{
+                height: 58px;
+                width: 0.8%;
+                padding: 8px 0px 3px 0px;
+                background-color: #db9926;
+                transform: skew(-18deg);
+            }
+
+            #box-paginas{
+                width: 79.9%;
+                background-color: #232323;
+                height: 58px;
+                padding: 8px 0px 3px 0px;
+                
+            }
+
+            #menu li{
+                list-style: none;
+                display: inline-block;	
+                margin-right: 25px;
+                font-family: 'Montserrat';
+                letter-spacing: 0.5px;
+	            font-size: 15px;
+            }
+
+            #menu li a{
+                text-decoration: none;
+                color: white;
+            }
+
+            #menu li a:hover{
+	            color: #FFA500;
+	            transition: 0.4s;
+            }
+
+            /* -- -- -- -- Box's -- -- -- --*/
+            #box-comprar{
+                width: 700px;
+                height: 550px;
+                padding: 34px 0px 0px 0px;
+            }
+
+            #box-comprar-info{
+                padding: 30px 0px 0px 0px;
+                width: 310px;
+                height: 333px;
+                float: left;
+            }
+
+            #box-vendido{
+                width: 400px;
+            }
+
+            #box-preco{
+                width: 400px;
+                margin-top: -18px;
+            }
+
+            #box-btn-comprar{
+                margin-top: 0px;
+                padding: 40px 30px 20px 30px;
+                width: 330px;
+                height: 293px;
+                float: left;
+            }
+
+            /* -- -- -- -- Box's -- -- -- --*/
+            #box-comprar{
+                width: 700px;
+                height: 550px;
+                padding: 34px 0px 0px 0px;
+            }
+
+            #box-comprar-info{
+                padding: 30px 0px 0px 0px;
+                width: 310px;
+                height: 333px;
+                float: left;
+            }
+
+            #box-vendido{
+                width: 400px;
+            }
+
+            #box-preco{
+                width: 400px;
+                margin-top: -18px;
+            }
+
+            #box-btn-comprar{
+                margin-top: 0px;
+                padding: 40px 30px 20px 30px;
+                width: 330px;
+                height: 293px;
+                float: left;
+            }
+
+            /* -- -- Nome do Produto -- --*/
+            #title-produto{
+                font-family: 'Montserrat'; 
+                font-weight: 300; 
+                font-size: 28px;
+            }
+
+            #cod-produto{
+                font-family: 'Montserrat'; 
+                color: #A0A0A0; 
+                margin-top: -10px;
+                margin-bottom: -18px;
+            }
+
+            #vendido-txt{
+                font-family: 'Montserrat';
+                float: left;
+            }
+
+
+            /* -- -- Preço -- --*/
+            #preco-antes{
+                font-family: 'Montserrat'; 
+                color: #919191;
+                margin-top: 28px;
+            }
+
+            #desconto-porcentagem{
+                background-color: #EC9C00; 
+                color: white;
+                padding: 3px 4px 3px 4px;
+                font-family: 'Roboto Condensed';
+                border-radius: 5px;
+                margin-left: 10px;
+                font-size: 15px;
+                user-select: none;
+            }
+
+            #preco-depois{
+                font-family: 'Montserrat'; 
+                font-size: 18px; 
+                margin-top: -3px; 
+                float: left;
+            }
+
+            #ouate{
+                font-family: 'Montserrat'; 
+                color: #919191; 
+                margin-top: -8px; 
+                font-size: 13px;
+            }
+
+            #economia{
+                background-color: #1E1E1E; 
+                color: white; 
+                font-family: 'Roboto Condensed';
+                border-radius: 20px; 
+                padding: 8px 20px 8px 20px; 
+                width: 170px; 
+                font-size: 17px;
+                letter-spacing: 0.5px;
+                text-align: center;
+                font-weight: bold;
+                user-select: none;
+            }
+
+
+            /* -- -- Botão Avaliar -- --*/
+            #btn-avaliar{
+                margin-left: 110px;
+                margin-bottom: 4px;
+                width: 220px;
+                padding: 10px 10px; 
+                background-color: #DE7900;
+                font-size: 16px;
+                font-family: 'Montserrat';
+                text-decoration: none;
+                color: white;
+                border: none;
+                letter-spacing: 0.5px;
+                border-radius: 6px;
+                user-select: none;
+            }
+
+            #btn-avaliar:active{
+                background-color: #CD5400;
+            }
+
+
+            /* -- -- Botão Comprar -- --*/
+            #pagamento-escolha{
+                margin-left:110px;
+                margin-top: 35px;
+                padding: 4px;
+                outline: none;
+                border-color: #E7E7E7;
+                width: 218px;
+                user-select: none;
+            }
+
+            #button{
+                margin-top: 16px;
+                background-color: #4CAF50;
+                text-decoration: none;
+                border: none;
+                border-radius: 6px;
+                color: white;
+                padding: 10px 10px;
+                font-size: 17px;
+                font-family: 'Open Sans';
+                letter-spacing: 1px;
+                width: 220px;
+                margin-left: 110px;
+                user-select: none;
+            }
+
+            #button:active{
+                background-color: #1A901E;
+            }
+
+            #btn-comprar-info{
+                text-align: justify;
+                width: 220px;
+                margin-left: 110px;
+                font-family: 'Montserrat';
+                font-size: 10.5px;
+                letter-spacing: 0.4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box-menu">
+            <div id="box-logo">
+                <a href="../../Home/Home.html">
+                    <div style=" width: 200px; height: 60px; position: absolute; margin-left: 28px; margin-top: -3.5px;"> </div>
+                </a>
+
+                <img src="../../Home/logo.PNG" alt="" width=48px style="margin-left: 40px; margin-right: 14px; float: left;">
+                <p id="marca"> Tryelions </p>
+            </div>
+
+            <div id="bar">
+
+            </div>
+
+            <div id="box-paginas">
+                <ul id="menu">
+                    <li style="margin-left: -5px;"><a href="../../Home/Home.html"> HOME </a></li>
+                    <li><a href="../../Produtos/gabinete/gabinete.html"> GABINETE </a></li>
+                    <li><a href="../../Produtos/monitor/monitor.html"> MONITOR </a></li>
+                    <li><a href="../../Produtos/teclado/teclado.html"> TECLADO </a></li>
+                    <li><a href="../../Produtos/capa/capa.html"> CAPINHA </a></li>
+                    <li><a href="../../Produtos/pelicula/pelicula.html"> PELÍCULA </a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="box" style="display: table-cell; padding: 30px 0px 0px 100px">
+            <div style=" width: 480px; height: 255px; float: left;">
+                <img src="../../Home/teclado.png" alt="Redragon Wheel Jack" title="Redragon Wheel Jack" style="width: 480px; height: 255px; user-select: none; margin-top: 90px;">
+            </div>
+
+            <div id="box-comprar" style="float: left;">
+                <h1 id="title-produto"> Teclado Cougar Gamer Vantar LED 8 Cores, ABNT2, CGR-WXNMB-VAN </h1>
+                <p id="cod-produto"> (Cód. Item 37VANXNMB-0004) </p>
+
+                <div id="box-comprar-info">
+                    <div id="box-vendido" style="display: table-cell;">
+                        <p id="vendido-txt"> Vendido e entregue por </p> 
+                        <img src="logo-terabyte.png" width="110px" height="40px" style="float: left; margin-top: 5px; margin-left: 5px; user-select: none; pointer-events: none;">
+                    </div> 
+
+                    <div id="box-preco">
+                            <p id="preco-antes"> de <s>R$ 241,26</s> 
+                                <span id="desconto-porcentagem"> -17% </span>
+                            </p>
+                        <div style="display: table-cell;">   
+                            <p id="preco-depois"> por <span style="font-size: 22px; font-weight: bold;"> R$ 199,90 </span> </p>
+                            <img src="blackfriday.png" style="width: 21x; height: 35px; margin-top: -8px; margin-left: 20px; float: left; user-select: none; pointer-events: none;">
+                        </div> 
+                    
+                        <p id="ouate"> ou até 11x de R$ 18,90 no cartão de crédito</p>
+                        <p id="economia"> ECONOMIA DE <span style="color: #fed029"> R$41,36 </span> </p>
+            
+                    </div>
+                </div>
+                <div id="box-btn-comprar">
+                    <a href="../../avaliacao/avaliacao.html"> <button id="btn-avaliar"> Avaliar Produto </button> </a>
+
+                    <form action="../../comprar/calcular.php" method="post"> 
+                        <select name="pagamento-escolha" id="pagamento-escolha">
+                            <option value="-3"> Forma de Pagamento </option>
+                            <option value="7"> Cartão de Débito </option>
+                            <option value="8"> Cartão de Crédito </option>
+                            <option value="9"> Cartão de Crédito Parcelado</option>
+                        </select>
+                        
+                        <button id="button" type="submit"> <img src="carrinho-compra.png" style="position: absolute; width: 26px; height: 26x; margin-top: 1px; pointer-events: none;"> <span style="margin-left: 36px;"> Comprar </span> </button>
+                    </form>
+                    
+                    <p id="btn-comprar-info"> Este produto é vendido e entregue por Terabyte. A <span style="color: #F09C00; font-size: 11.5px; font-weight: bold;"> Tryelions </span> garante a sua compra, do pedido à entrega. </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
